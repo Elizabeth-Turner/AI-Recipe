@@ -1,0 +1,82 @@
+<div class="container">
+  
+  <h1 class="title">RECIPE GENERATOR</h1>
+  <h2>Give me your ingredients, dietary restrictions, food type preference, and number of servings</h2>
+  <h2>I'll generate the PERFECT recipe for you</h2>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="getRecipe()"
+    class="bg-light p-4 rounded shadow form"
+  >
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <label class="label" for="ingredients">Ingredients: </label>
+          <input
+            id="ingredients"
+            type="string"
+            formControlName="ingredients"
+            class="form-control"
+            placeholder="separate ingredients by commas (ex: chicken, noodles)"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6 restriction">
+        <div class="form-group">
+          <label class="label" for="restrictions">Dietary Restrictions: </label>
+          <input
+            id="restrictions"
+            type="string"
+            formControlName="restrictions"
+            class="form-control"
+            placeholder="separate restrictions by commas (ex: nut allergy, vegan) or input 'None'"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6 restriction">
+        <div class="form-group">
+          <label class="label" for="restrictions">Type of Food: </label>
+          <input
+            id="type"
+            type="string"
+            formControlName="type"
+            class="form-control"
+            placeholder="include description of type of food you want (ex: hot, italian, sweet)"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6 restriction">
+        <div class="form-group">
+          <label class="label" for="restrictions">Servings: </label>
+          <input
+            id="servings"
+            type="number"
+            min="1"
+            max="100"
+            formControlName="servings"
+            class="form-control"
+            placeholder="include number of servings between 1 and 100"
+          />
+        </div>
+      </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="isLoading || !isValid"
+      [ngClass]="{ 'btn-secondary': !isValid || isLoading }"
+    >
+      Get Recipe
+    </button>
+  </form>
+
+  <div *ngIf="recipe" class="recipe">
+    <p [innerHTML]="recipe"></p>
+    <img [src]="recipeImage" class="image"/>
+  </div>
+
+</div>

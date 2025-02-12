@@ -1,0 +1,92 @@
+body {
+    background: linear-gradient(to left, #FF5F6D , #FFC371);
+    font-family: sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+  
+h1 {
+    color: white; 
+    text-align: center; 
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: white; 
+    text-align: center;
+}
+
+input{
+    position: relative;
+    border-radius: 5px; 
+    border: 2px solid #cb1212;
+    padding: 10px;
+    width: 500px;
+    font-size: 14px;
+}
+
+button {
+    border-radius: 5px; 
+    border: 2px solid #cb1212;
+    background-color: white; 
+    color: #FF5F6D;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #6c757d; 
+    border-color: #6c757d; 
+}
+  
+.btn-secondary:disabled {
+    color: white;
+    background-color: #6c757d; 
+    border-color: #6c757d; 
+    opacity: 0.65; 
+    cursor: not-allowed; 
+}
+
+form {
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+    color: black;
+}
+
+.restriction {
+    margin-top: 10px;
+}
+
+.recipe {
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 50px;
+    padding: 30px;
+    color: black;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.container {
+    padding-bottom: 50px;
+}
+  
+.title {
+    font-family: cursive;
+    font-size: 70px;
+    text-shadow: -1px -1px 0 #cb1212, 1px -1px 0 #cb1212, 1px 1px 0 #cb1212,
+    1px 1px 0 #cb1212;
+}
